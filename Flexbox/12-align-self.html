@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - align self</title>
+
+    <style>
+        .flex-container{
+            max-width: 450px;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            display:flex;
+            
+        }
+
+        .align-container{
+            align-items: center;
+        }
+
+        .item{
+             background-color: brown;
+             color: white;
+             font-size: 24px;
+             text-align: center;
+             margin: 5px;
+        }
+
+        .center{
+            align-self:center;
+        }
+
+        .start{
+            align-self: flex-start;
+        }
+
+        .end{
+            align-self: flex-end;
+        }
+
+        .baseline{
+            align-self: baseline;
+        }
+
+        .stretch{
+            align-self: stretch;
+        }
+
+        .auto{
+            align-self: auto;
+        }
+
+        .direction{
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ROW</h1>
+    <section class="flex-container align-container">
+        <div class="item auto">AAAA</div>
+        <div class="item auto">123</div>
+        <div class="item auto">L is for the way you look at me</div>
+        <div class="item auto">item 4</div>
+    </section>
+
+    <section class="flex-container">
+        <div class="item center">AAAA</div>
+        <div class="item start ">123</div>
+        <div class="item stretch">L is for the way you look at me</div>
+        <div class="item end">item 4</div>
+    </section>
+
+    <section class="flex-container">
+        <div class="item center">AAA</div>
+        <div class="item start ">AAAAA</div>
+        <div class="item end">Hello world</div>
+        <div class="item stretch">O is for the only one i see <br> V is very very extraordinary</div>
+    </section>
+
+    <h1>COLUMN</h1>
+
+    <section class="flex-container align-container direction">
+        <div class="item auto">AAAA</div>
+        <div class="item auto">123</div>
+        <div class="item auto">L is for the way you look at me</div>
+        <div class="item auto">item 4</div>
+    </section>
+
+    <section class="flex-container direction">
+        <div class="item center">AAAA</div>
+        <div class="item start ">123</div>
+        <div class="item stretch">L is for the way you look at me</div>
+        <div class="item end">item 4</div>
+    </section>
+
+    <section class="flex-container direction">
+        <div class="item center">AAA</div>
+        <div class="item start ">AAAAAAAAAAA</div>
+        <div class="item end">Hello world</div>
+        <div class="item stretch">O is for the only one i see <br> V is very very extraordinary</div>
+    </section>
+</body>
+</html>
