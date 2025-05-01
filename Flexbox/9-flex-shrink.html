@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex shrink</title>
+
+    <style>
+        .flex-container{
+            display: flex;
+            border: 1px solid black;
+            max-width: 350px;
+        }
+
+        .item{
+            background-color: orange;
+            font-size:24px;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .shrink-1{
+            flex-shrink: 1;
+        }
+
+        .fg-1{
+            flex-grow: 1;
+        }
+
+        .shrink-0{
+            flex-shrink: 0;
+            flex-basis: 200px;
+        }
+
+        .shrink-2{
+            flex-shrink: 2;
+            flex-basis: 100px;
+        }
+
+        .shrink-3{
+            flex-shrink: 3;
+            flex-basis: 100px;
+        }
+    </style>
+
+</head>
+<body>
+    <p>flex-shrink: 1</p>
+    <div class="flex-container">
+        <div class="item shrink-1 fg-1">A</div>
+        <div class="item shrink-1 fg-1">B</div>
+        <div class="item shrink-1 fg-1">C</div>
+        <div class="item shrink-1 fg-1">D</div>
+        <div class="item shrink-1 fg-1">E</div>
+    </div>
+
+    <div class="flex-container">
+        <div class="item shrink-1 fg-1">A</div>
+        <div class="item shrink-1 fg-1">O rato roeu a roupa do rei de roma</div>
+        <div class="item shrink-1 fg-1">C</div>
+        <div class="item shrink-1 fg-1">D</div>
+        <div class="item shrink-1 fg-1">E</div>
+    </div>
+
+    <p>flex-shrink: 0 / basis: 200px</p>
+    <div class="flex-container">
+        <div class="item shrink-0 fg-1">L is for the way you look at me</div>
+        <div class="item shrink-0 fg-1">O is for the only one I see</div>
+        <div class="item shrink-0 fg-1">V is very very extraordinary</div>
+        <div class="item shrink-0 fg-1">E is even more than anyone that you adore can...</div>
+    </div>
+
+    <p>flex-shrink: mix / basis: 200px</p>
+    <div class="flex-container">
+        <div class="item shrink-1 fg-1">Lis for the way you look at me</div>
+        <div class="item shrink-2 fg-1">Only one I see</div>
+        <div class="item shrink-2 fg-1">Very very</div>
+        <div class="item shrink-3 fg-1">E is even</div>
+    </div>
+</body>
+</html>
